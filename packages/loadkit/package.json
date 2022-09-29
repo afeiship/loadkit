@@ -1,7 +1,7 @@
 {
-  "name": "@jswork/url-change",
+  "name": "@jswork/loadkit",
   "version": "1.0.0",
-  "description": "Listen url change.",
+  "description": "Async load or preload scripts or styles.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "typings": "dist/esm/index.d.ts",
@@ -39,9 +39,5 @@
     "registry": "https://registry.npmjs.org"
   },
   "boilerplate": "generator-typescript",
-  "homepage": "https://js.work",
-  "dependencies": {
-    "@jswork/next": "^1.1.5",
-    "@jswork/next-url-watcher": "^1.0.4"
-  }
+  "homepage": "https://js.work"
 }

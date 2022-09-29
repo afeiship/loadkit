@@ -1,5 +1,5 @@
 {
-  "name": "url-change",
+  "name": "loadkit",
   "private": true,
   "workspaces": {
     "packages": [
@@ -21,6 +21,6 @@
   "homepage": "https://js.work",
   "repository": {
     "type": "git",
-    "url": "https://github.com/afeiship/url-change.git"
+    "url": "https://github.com/afeiship/loadkit.git"
   }
 }
