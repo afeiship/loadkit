@@ -1,3 +1,5 @@
-export default (): void => {
-  console.log('hello');
-};
+import loadScript from './load-script'
+
+export {
+  loadScript
+}
