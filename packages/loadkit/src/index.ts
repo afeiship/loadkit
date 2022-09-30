@@ -1,5 +1,3 @@
-import loadScript from './load-script'
+import loadScript from './load-script';
 
-export {
-  loadScript
-}
+export { loadScript };
