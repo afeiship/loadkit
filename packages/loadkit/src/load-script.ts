@@ -1,14 +1,12 @@
-export default (inUrl: string, inProps: Partial<HTMLScriptElement>): Promise<any> => {
-  const id = inProps.id;
-  if (id && document.getElementById(id)) return Promise.resolve(null);
+import loadNode, { LoadNodeOptions } from './load-node';
 
-  const props = { src: inUrl, ...inProps };
+type LoadScriptOptions = LoadNodeOptions & Partial<HTMLScriptElement>;
 
-  const script = document.createElement('script');
-  for (const key in props) script.setAttribute(key, props[key]);
-  document.body.appendChild(script);
-  return new Promise((resolve, reject) => {
-    script.onload = () => resolve(null);
-    script.onerror = () => reject(new Error(`Failed to load script: ${inUrl}`));
-  });
+export const loadScript = (inUrl: string, inProps: LoadScriptOptions): Promise<null> => {
+  const { id, urlKey = 'src', tagName = 'script', ...opts } = inProps;
+  return loadNode(inUrl, { id, urlKey, tagName, ...opts });
+};
+
+export const loadScripts = (inUrls: string[], props: LoadScriptOptions): Promise<null> => {
+  return Promise.all(inUrls.map((url) => loadScript(url, props))).then(() => null);
 };

@@ -1,4 +1,4 @@
-import loadScript from './load-script';
-import loadScripts from './load-scripts';
+import { loadScript, loadScripts } from './load-script';
+import { loadStyle, loadStyles } from './load-style';
 
-export { loadScript, loadScripts };
+export { loadScript, loadScripts, loadStyle, loadStyles };
