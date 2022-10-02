@@ -1,6 +1,6 @@
 import { loadScript } from '../src';
 
-jest.setTimeout(50 * 1000);
+jest.setTimeout(5 * 1000);
 
 describe('api.basic', () => {
   test('normail single value case', (done) => {

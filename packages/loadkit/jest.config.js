@@ -3,7 +3,8 @@ module.exports = {
   verbose: true,
   testRegex: [/\.spec.ts/],
   //preset: "jest-puppeteer",
+  testEnvironment: 'jsdom',
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1'
-  }
+    '^@/(.*)$': '<rootDir>/src/$1',
+  },
 };
