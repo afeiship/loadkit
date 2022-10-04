@@ -5,6 +5,8 @@ jest.setTimeout(5 * 1000);
 describe('api.basic', () => {
   test('normail single value case', (done) => {
     const url = 'https://unpkg.zhimg.com/@cfe/sentry-script@1.3.1/dist/init.js';
+    const script = document.createElement('script')
+    script.src = url
     console.log(document.documentElement.innerHTML)
     loadScript(url, { id: 'lskit' })
       .then((res) => {
