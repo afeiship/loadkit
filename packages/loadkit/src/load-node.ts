@@ -16,6 +16,7 @@ export default function loadNode(inUrl: string, inProps: LoadNodeOptions): Promi
   const props = { [urlKey!]: inUrl, ...opts };
 
   let node = document.createElement(tagName!);
+  if (id) node.id = id;
   callback && (node = callback(node));
   for (const key in props) node.setAttribute(key, props[key]);
   containerNode.appendChild(node);
