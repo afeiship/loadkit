@@ -12,9 +12,9 @@ export default function loadNode(inUrl: string, inProps: LoadNodeOptions): Promi
   const { id, urlKey, tagName, callback, container, ...opts } = inProps;
   const containerNode = container || document.body;
   const props = { [urlKey!]: inUrl, ...opts };
-  const elSelector = `${tagName}[${urlKey}="${inUrl}"]`;
+  const selector = `${tagName}[${urlKey}="${inUrl}"]`;
   const cleanUp = () => {
-    const els = document.querySelectorAll(elSelector) as any;
+    const els = document.querySelectorAll(selector) as any;
     if (els.length > 1) {
       // remove all but the first
       for (let i = 1; i < els.length; i++) {
