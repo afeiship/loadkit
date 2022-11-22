@@ -4,7 +4,7 @@ type LoadStyleOptions = LoadNodeOptions & Partial<HTMLLinkElement>;
 
 export const loadStyle = (inUrl: string, inProps: LoadStyleOptions): Promise<null> => {
   const {id, urlKey = 'href', tagName = 'link', rel = "stylesheet", container = document.head, ...props} = inProps;
-  return loadNode(inUrl, {id, urlKey, tagName, rel, ...props});
+  return loadNode(inUrl, {id, urlKey, tagName, rel, container, ...props});
 };
 
 export const loadStyles = (inUrls: string[], props: LoadStyleOptions): Promise<null> => {
