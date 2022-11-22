@@ -1,6 +1,6 @@
 {
   "name": "@jswork/loadkit",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Async load or preload scripts or styles.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
