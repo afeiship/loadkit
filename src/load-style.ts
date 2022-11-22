@@ -1,10 +1,10 @@
-import loadNode, { LoadNodeOptions } from './load-node';
+import loadNode, {LoadNodeOptions} from './load-node';
 
 type LoadStyleOptions = LoadNodeOptions & Partial<HTMLLinkElement>;
 
 export const loadStyle = (inUrl: string, inProps: LoadStyleOptions): Promise<null> => {
-  const { id, urlKey = 'href', tagName = 'link', container = document.head, ...props } = inProps;
-  return loadNode(inUrl, { id, urlKey, tagName, ...props });
+  const {id, urlKey = 'href', tagName = 'link', ref = "stylesheet", container = document.head, ...props} = inProps;
+  return loadNode(inUrl, {id, urlKey, tagName, ...props});
 };
 
 export const loadStyles = (inUrls: string[], props: LoadStyleOptions): Promise<null> => {
