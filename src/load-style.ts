@@ -3,7 +3,7 @@ import loadNode, {LoadNodeOptions} from './load-node';
 type LoadStyleOptions = LoadNodeOptions & Partial<HTMLLinkElement>;
 
 export const loadStyle = (inUrl: string, inProps: LoadStyleOptions): Promise<null> => {
-  const {id, urlKey = 'href', tagName = 'link', ref = "stylesheet", container = document.head, ...props} = inProps;
+  const {id, urlKey = 'href', tagName = 'link', rel = "stylesheet", container = document.head, ...props} = inProps;
   return loadNode(inUrl, {id, urlKey, tagName, ...props});
 };
 
