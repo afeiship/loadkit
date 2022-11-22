@@ -1,6 +1,6 @@
 {
   "name": "@jswork/loadkit",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Async load or preload scripts or styles.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -41,5 +41,11 @@
     "registry": "https://registry.npmjs.org"
   },
   "boilerplate": "generator-typescript",
-  "homepage": "https://js.work"
+  "homepage": "https://js.work",
+  "keywords": [
+    "load",
+    "loader",
+    "script",
+    "style"
+  ]
 }
