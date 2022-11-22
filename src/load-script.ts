@@ -8,7 +8,7 @@ export const loadScript = (inUrl: string, inProps: LoadScriptOptions): Promise<n
     return node;
   };
   const { id, urlKey = 'src', tagName = 'script', container = document.body, ...props } = inProps;
-  return loadNode(inUrl, { id, urlKey, callback, tagName, ...props });
+  return loadNode(inUrl, { id, urlKey, callback, tagName, container, ...props });
 };
 
 export const loadScripts = (inUrls: string[], props: LoadScriptOptions): Promise<null> => {
